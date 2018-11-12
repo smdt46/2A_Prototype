@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Material Design for Bootstrap fonts and icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+	<!-- Material Design for Bootstrap CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+	<title>教員情報画面</title>
+</head>
+<body>
+	
+	<!-- ナビゲーションバー -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+		<span class="navbar-brand mb-0 h1">KOBE DENSHI</span>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+			
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../timeline.html">ホーム</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../search.html">検索結果</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						ユーザー情報
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="./user_detail.html">詳細画面</a>
+						<a class="dropdown-item" href="./user_config.html">編集画面</a>
+						<a class="dropdown-item" href="./teacher_detail.html">教員詳細画面</a>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="btn btn-raised btn-primary mr-2"  data-toggle="modal" data-target="#messageModal">
+				メッセージ <span class="badge badge-light">2</span>
+			</button>
+			<span class="navbar-text">
+				ようこそ 田中 一平 さん
+			</span>
+		</div>
+	</nav>
+
+
+	<!-- コンテンツここから -->
+	<div class="container mt-3">
+
+		<!-- アカウント画像 -->
+		<img src="../img/f_f_object_170_s128_f_object_170_0bg.png" class="rounded-circle float-left mr-3" width="100" height="100" alt="...">
+
+		<!-- フォローボタン -->
+		<div class="float-right">
+			<a class="btn btn-raised btn-primary" href="#" role="button">フォロー</a>
+			<a class="btn btn-raised btn-primary" href="#" role="button">メッセージを送る</a>
+		</div>
+
+		<h1>加藤 伝助<img src="../img/アイコン.png" width="45" height="45"></h1>
+		<h2>教員</h2>
+
+		<hr>
+
+		<h3>自己紹介</h3>
+		<p>hugahugahogehogeguhaguha</p>
+
+		<hr>
+
+		<h3>スキルタグ</h3>
+		<div class="row">
+			<div class="col">
+				<h4>経験分野</h4>
+				<h5>
+					<a href="https://www.google.co.jp/search?q=Docker" target="_blank" class="badge badge-success mr-1">Docker</a>
+					<a href="https://www.google.co.jp/search?q=kubernetes" target="_blank" class="badge badge-success mr-1">kubernetes</a>
+				</h5>
+			</div>
+			<div class="col">
+				<h4>取得資格</h4>
+				<h5><a href="https://www.google.co.jp/search?q=https://www.google.co.jp/search?q=%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AA%E3%82%B9%E3%83%88%E8%A9%A6%E9%A8%93" target=”_blank” class="badge badge-success mr-1">ネットワークスペシャリスト試験</a></h5>
+			</div>
+		</div>
+		<hr>
+
+
+		<h3>タイムライン</h3>
+		<div class="card my-3">
+			<div class="card-body">
+				<p class="card-text">hugahoge</p>
+			</div>
+			<div class="card-footer text-muted">
+				2018年9月19日 16:10
+			</div>
+		</div>
+		<div class="card my-3">
+			<div class="card-body">
+				<p class="card-text">hogehoge</p>
+			</div>
+			<div class="card-footer text-muted">
+				2018年9月12日 20:20
+			</div>
+		</div>
+
+		<!-- メッセージモーダル -->
+		<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="messageModalLabel">メッセージ</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="row">
+
+						<!-- ユーザー選択 -->
+						<div class="col-4">
+							<div class="list-group" id="list-tab" role="tablist">
+								<a class="list-group-item list-group-item-action active" id="list-user1-list" data-toggle="list" href="#list-user1" role="tab" aria-controls="user1">ユーザー1</a>
+								<a class="list-group-item list-group-item-action" id="list-user2-list" data-toggle="list" href="#list-user2" role="tab" aria-controls="user2">ユーザー2</a>
+								<a class="list-group-item list-group-item-action" id="list-user3-list" data-toggle="list" href="#list-user3" role="tab" aria-controls="user3">ユーザー3<span class="badge badge-dark badge-pill">2</span></a>
+							</div>
+						</div><!-- ユーザー選択部分ここまで -->
+
+						<!-- メッセージ部分 -->
+						<div class="col-8">
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane fade show active" id="list-user1" role="tabpanel" aria-labelledby="list-user1-list">
+									<p class="text-left bg-light rounded p-3">こんにちは！あなたをスカウトしに来ました！！</p>
+									<p class="text-right bg-success rounded p-3">こんにちは。どんなプロジェクトやろうとしてるんですか？？</p>
+									<p class="text-left bg-light rounded p-3">はい！実はあれをこうしてこうやりたいんですが…</p>
+									<p class="text-right bg-success rounded p-3">いいですね！やりやしょう！</p>
+									<form class="form-inline">
+										<div class="form-group">
+											<input type="text" class="form-control" id="message"  placeholder="メッセージを追加">
+										</div>
+										<span class="form-group bmd-form-group">
+											<button type="button" class="btn btn-raised btn-primary">送信</button>
+										</span>
+									</form>
+								</div>
+								<div class="tab-pane fade" id="list-user2" role="tabpanel" aria-labelledby="list-user2-list">
+									<p class="text-left bg-light rounded p-3">一緒にアレ作りませんか！</p>
+									<form class="form-inline">
+										<div class="form-group">
+											<input type="text" class="form-control" id="message"  placeholder="メッセージを追加">
+										</div>
+										<span class="form-group bmd-form-group">
+											<button type="button" class="btn btn-raised btn-primary">送信</button>
+										</span>
+									</form>
+								</div>
+								<div class="tab-pane fade" id="list-user3" role="tabpanel" aria-labelledby="list-user3-list">
+									<p class="text-left bg-light rounded p-3">チームに入ってください！</p>
+									<p class="text-left bg-light rounded p-3">お願いします！</p>
+									<form class="form-inline">
+										<div class="form-group">
+											<input type="text" class="form-control" id="message"  placeholder="メッセージを追加">
+										</div>
+										<span class="form-group bmd-form-group">
+											<button type="button" class="btn btn-raised btn-primary">送信</button>
+										</span>
+									</form>
+								</div>
+							</div>
+						</div><!-- メッセージ部分ここまで -->
+
+					</div>
+				</div>
+			</div>
+		</div><!-- メッセージモーダル部分ここまで -->
+
+
+	</div><!-- コンテンツ部分ここまで -->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+	<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  </body>
+</html>
