@@ -24,7 +24,7 @@
       
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="./timeline.html">ホーム</a>
         </li>
         <li class="nav-item">
@@ -40,8 +40,11 @@
             <a class="dropdown-item" href="./user/teacher_detail.html">教員詳細画面</a>
           </div>
         </li>
+        <li>
+          <a class="nav-link active" href="./project_detail.html">プロジェクト詳細</a>
+        </li>
       </ul>
-      <button type="button" class="btn btn-raised btn-primary mr-2"  data-toggle="modal" data-target="#messageModal">
+      <button type="button" class="btn btn-raised btn-primary mr-2" data-toggle="modal" data-target="#messageModal">
         メッセージ <span class="badge badge-light">2</span>
       </button>
       <span class="navbar-text">
@@ -54,23 +57,37 @@
   <!-- コンテンツここから -->
   <div class="container">
 
-    <h1>プロジェクト詳細表示画面</h1>
-
-    <div class="w-75 mx-auto">
-      <h2>Webサイトを作ろう！</h2>
-      <table class="table table-bordered">
-        <tbody>
-          <tr><th class="table-info">募集分野(対象)</th><td class="table-light">IT、グラフィック</td></tr>
-          <tr><th class="table-info">必須条件</th><td>gitが使える人（IT分野のみ）</td></tr>
-          <tr><th class="table-info">プロジェクトの内容</th><td>Webサイトを作ります。</td></tr>
-          <tr><th class="table-info">プロジェクトの期間</th><td>2018/11/14 - 2019/1/30</td></tr>
-          <tr><th class="table-info">連絡先</th><td>山田太郎(ITスペシャリスト学科 2年)<br>kd1234567@st.kobedenshi.ac.jp</td></tr>
-          <tr><th class="table-info">その他</th><td>一緒にやりましょう</td></tr>
-        </tbody>
-      </table>
-      <button type="button" class="btn btn-raised btn-primary">メッセージを送る</button>
+    <h1>Webサイトを作ろう！</h1>
+    <p>投稿者：山田 太郎（ITスペシャリスト学科 2年）<br>
+      投稿日：2018年11月15日 13:44
+    </p>
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tbody>
+              <tr><th class="table-info text-nowrap">募集分野</th><td class="table-light">IT、グラフィック</td></tr>
+              <tr><th class="table-info text-nowrap">必須条件</th><td>gitが使える人（IT分野のみ）<br>Webデザイナー検定 ベーシック以上（グラフィックデザイン分野のみ）</td></tr>
+              <tr><th class="table-info text-nowrap">プロジェクトの内容</th><td>Webサイトを作ります。<br>質問に関しては連絡先か、メッセージからお願いします。</td></tr>
+              <tr><th class="table-info text-nowrap">プロジェクトの期間</th><td>2018/11/15 - 2019/1/30</td></tr>
+              <tr><th class="table-info text-nowrap">連絡先</th><td>山田 太郎　ITスペシャリスト学科 2年<br>kd1234567@st.kobedenshi.ac.jp</td></tr>
+              <tr><th class="table-info text-nowrap">その他</th><td>一緒にやりましょう</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" id="button" class="btn btn-raised btn-primary btn-lg btn-block" onclick="OnButtonClick();">参加する</button>
+      </div>
+      
+      <div class="col-sm-3">
+        <h4>参加者</h4>
+        <ul class="list-group bmd-list-group-sm">
+          <li class="list-group-item"><b>山田 太郎（投稿者）</b></li>
+          <li class="list-group-item">神戸 電子</li>
+          <li class="list-group-item">織田 信長</li>
+          <li class="list-group-item"><div id="output" class="text-danger"></div></li>
+        </ul>
+      </div>
     </div>
-
 
     <!-- メッセージモーダル -->
     <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
@@ -152,6 +169,16 @@
   <!-- ツールチップスクリプト -->
   <script>
     $('[data-toggle="tooltip"]').tooltip()
+  </script>
+  <!-- 参加スクリプト -->
+  <script>
+    function OnButtonClick() {
+      target = document.getElementById("output");
+      target.innerHTML = "田中 一平";
+      target = document.getElementById("button");
+      target.innerHTML = "キャンセル";
+      target.className = "btn btn-raised btn-secondary btn-lg btn-block";
+    }
   </script>
 </body>
 </html>
