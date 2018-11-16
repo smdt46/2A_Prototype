@@ -40,6 +40,9 @@
             <a class="dropdown-item" href="./user/teacher_detail.html">教員詳細画面</a>
           </div>
         </li>
+        <li>
+          <a class="nav-link" href="./project_detail.html">プロジェクト詳細</a>
+        </li>
       </ul>
       <button type="button" class="btn btn-raised btn-primary mr-2"  data-toggle="modal" data-target="#messageModal">
           <i class="material-icons mr-1" style="display: inline-flex; vertical-align: middle;">message</i>メッセージ <span class="badge badge-light">2</span>
@@ -88,8 +91,8 @@
             </label>
           </div>
           <div class="checkbox">
-              <label><input type="checkbox"> プロジェクト人員募集のみ</label>
-            </div>
+            <label><input type="checkbox"> プロジェクト人員募集のみ</label>
+          </div>
           <input class="btn btn-raised btn-primary" type="button" value="検索">
         </form>
       </div><!-- 検索フォームここまで -->
@@ -133,12 +136,12 @@
           </div>
           <div class="card-footer text-muted">
               <img src="img/default_icon.png" class="rounded-circle float-left mr-3" width="50" height="50" style="border: 2px orange solid;" alt="アカウント画像">
-            <h6><a href="#" class="card-link">兵庫 太郎</a>　エンターテイメントソフト学科 2年</h6>今度教えてください!
+            <h6><a href="#" class="card-link">兵庫 太郎</a>　エンターテインメント学科 2年</h6>今度教えてください!
           </div>
           <div class="card-footer text-muted">
             <div class="row">
               <div class="col-11">
-                <input type="text" class="form-control" id="message"  placeholder="コメントを追加">
+                <input type="text" class="form-control" id="message" placeholder="コメントを追加">
               </div>
               <div class="col-1">
                 <button type="button" class="btn btn-raised btn-primary">投稿</button>
@@ -159,13 +162,14 @@
           </div>
           <div class="card-body">
             <p class="card-text"><span class="badge badge-danger">プロジェクト人員募集</span></p>
-            <p class="card-text">Javaが書ける人を探しています！かくがくしかじかやるプロジェクトです。</p>
+            <h5 class="card-title">Webサイトを作ろう！</h5>
+            <p class="card-text">Webサイトを作ります。<br>質問に関しては連絡先か、メッセージからお願いします。</p>
             <a href="./project_detail.html" class="card-link">プロジェクトの詳細</a>
           </div>
           <div class="card-footer text-muted">
             <div class="row">
               <div class="col-11">
-                <input type="text" class="form-control" id="message"  placeholder="コメントを追加">
+                <input type="text" class="form-control" id="message" placeholder="コメントを追加">
               </div>
               <div class="col-1">
                 <button type="button" class="btn btn-raised btn-primary">投稿</button>
@@ -176,23 +180,52 @@
 
 
         <!-- 投稿サンプル3件目 -->
+        <div class="card my-3">
+          <div class="card-header">
+            <a href="user/user_detail.html" class="card-link">
+              <img src="img/default_icon.png" class="rounded-circle float-left mr-3" width="75" height="75" style="border: 3px purple solid;" alt="アカウント画像">
+              <h5><span class="card-title">明智 光秀</span>
+            </a>　声優タレント学科 2年</h5>
+            2018年9月18日 12:35
+          </div>
+          <div class="card-body">
+            <p class="card-text">ナレーションについての勉強をやった。</p>
+            <i class="material-icons" data-toggle="tooltip" data-placement="top" title="いいね！" style="display: inline-flex; vertical-align: middle; color: gray;">thumb_up_alt</i>&nbsp;7
+          </div>
+          <div class="card-footer text-muted">
+            <div class="row">
+              <div class="col-11">
+                <input type="text" class="form-control" id="message" placeholder="コメントを追加">
+              </div>
+              <div class="col-1">
+                <button type="button" class="btn btn-raised btn-primary">投稿</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 投稿サンプル4件目 -->
         <div class="card my-3" style="background-color: lemonchiffon;">
           <div class="card-header">
             <a href="user/user_detail.html" class="card-link">
-              <img src="img/f_f_object_111_s512_f_object_111_0bg.png" class="rounded-circle float-left mr-3" width="75" height="75" style="border: 3px lime solid;" alt="アカウント画像">
+              <img src="img/f_f_object_111_s512_f_object_111_0bg.png" class="rounded-circle float-left mr-3" width="75" height="75" style="border: 3px orange solid;" alt="アカウント画像">
               <h5><span class="card-title">鈴木 花子</span>
-            </a>　グラフィックデザイン学科 2年</h5>
+            </a>　エンターテインメント学科 2年</h5>
+            <h5 class="card-subtitle mb-2 text-muted">
+              <a href="https://www.google.co.jp/search?q=C%2B%2B" target="_blank" class="badge badge-primary mr-1">C++<span class="badge badge-light ml-1">Lv.4</span></a>
+            </h5>
             2018年9月17日 12:12
           </div>
           <div class="card-body">
             <p class="card-text"><span class="badge badge-danger">プロジェクト人員募集</span></p>
-            <p class="card-text">一緒にWebサイトを作りませんか？Java、PHPなど書ける人募集しています。</p>
+            <h5 class="card-title">ゲーム開発プロジェクト</h5>
+            <p class="card-text">ゲームを作りませんか？ジャンルはRPG系のものを考えています。<br>UnityやC++を使える人募集してます！</p>
             <a href="./project_detail.html" class="card-link">プロジェクトの詳細</a>
           </div>
           <div class="card-footer text-muted">
             <div class="row">
               <div class="col-11">
-                <input type="text" class="form-control" id="message"  placeholder="コメントを追加">
+                <input type="text" class="form-control" id="message" placeholder="コメントを追加">
               </div>
               <div class="col-1">
                 <button type="button" class="btn btn-raised btn-primary">投稿</button>
@@ -300,6 +333,7 @@
         </div><!-- メッセージモーダル部分ここまで -->
 
 
+        <!-- 新しいプロジェクトモーダル部分 -->
         <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -333,9 +367,9 @@
                 </div>
                 <div class="form-group">
                   <label for="projectDetail" class="bmd-label-floating">プロジェクトの内容</label>
-                  <textarea type="text" class="form-control" id="projectDetail" rows="5"></textarea>
+                  <textarea class="form-control" id="projectDetail" rows="5"></textarea>
                 </div>
-                <div class="form-row mb-4">
+                <div class="form-row">
                   <div class="col">
                     <label for="projectStart" class="bmd-label-floating">プロジェクトの開始日</label>
                     <input type="date" class="form-control" id="projectStart">
@@ -345,11 +379,15 @@
                     <input type="date" class="form-control" id="projectEnd">
                   </div>
                 </div>
-                <button type="button" class="btn btn-raised btn-primary">投稿する</button>
+                <div class="form-group">
+                  <label for="projectOther" class="bmd-label-floating">その他</label>
+                  <input type="text" class="form-control" id="projectOther" rows="5">
+                </div>
+                <button type="button" class="btn btn-raised btn-primary">投稿</button>
               </form>
             </div>
           </div>
-        </div><!-- メッセージモーダル部分ここまで -->
+        </div><!-- 新しいプロジェクトモーダル部分ここまで -->
 
       </div><!-- タイムライン部分ここまで -->
     </div>
