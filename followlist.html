@@ -11,7 +11,7 @@
   <!-- Material Design for Bootstrap CSS -->
   <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-  <title>ユーザー情報画面</title>
+  <title>フォロー一覧</title>
 </head>
 <body>
   
@@ -25,23 +25,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="../timeline.html">ホーム</a>
+          <a class="nav-link" href="./timeline.html">ホーム</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../search.html">検索結果</a>
+          <a class="nav-link" href="./search.html">検索結果</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             ユーザー情報
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="./user_detail.html">詳細画面</a>
-            <a class="dropdown-item" href="./user_config.html">編集画面</a>
-            <a class="dropdown-item" href="./teacher_detail.html">教員詳細画面</a>
+            <a class="dropdown-item" href="./user/user_detail.html">詳細画面</a>
+            <a class="dropdown-item" href="./user/user_config.html">編集画面</a>
+            <a class="dropdown-item" href="./user/teacher_detail.html">教員詳細画面</a>
           </div>
         </li>
+        <li>
+          <a class="nav-link active" href="./project_detail.html">プロジェクト詳細</a>
+        </li>
       </ul>
-      <button type="button" class="btn btn-raised btn-primary mr-2"  data-toggle="modal" data-target="#messageModal">
+      <button type="button" class="btn btn-raised btn-primary mr-2" data-toggle="modal" data-target="#messageModal">
         メッセージ <span class="badge badge-light">2</span>
       </button>
       <span class="navbar-text">
@@ -52,69 +55,13 @@
 
 
   <!-- コンテンツここから -->
-  <div class="container mt-3">
+  <div class="container">
 
-    <!-- アカウント画像 -->
-    <img src="../img/f_f_object_95_s512_f_object_95_0bg.png" class="rounded-circle float-left mr-3" width="100" height="100" style="border: 3px blue solid;" alt="アカウント画像">
-
-    <!-- フォローボタン -->
-    <div class="float-right">
-      <a class="btn btn-raised btn-primary" href="#" role="button">フォロー</a>
-      <button type="button" class="btn btn-raised btn-primary mr-2"  data-toggle="modal" data-target="#messageModal">メッセージを送る</button>
-    </div>
-
-    <h1>神戸 電子</h1>
-    <h2>ITスペシャリスト学科 2年</h2>
-
-    <hr>
-
-    <h3>自己紹介</h3>
-    <p>いろんなプログラミング言語を勉強しようと思っています。</p>
-
-    <hr>
-
-    <h3>スキルタグ</h3>
-    <div class="row">
-      <div class="col-sm">
-        <h4>経験分野</h4>
-        <h5>
-          <ul class="list-unstyled">
-            <li><a href="https://www.google.co.jp/search?q=C%E8%A8%80%E8%AA%9E" target="_blank" class="badge badge-primary mr-1">C言語<span class="badge badge-light ml-1">Lv.3</span></a></li>
-            <ul class="list-unstyled ml-3"><li>基本文法とDXライブラリの使用経験あり</li></ul>
-            <li><a href="https://www.google.co.jp/search?q=Java" target="_blank" class="badge badge-primary mr-1">Java<span class="badge badge-light ml-1">Lv.3</span></a></li>
-            <ul class="list-unstyled ml-3"><li>基本文法と、EclipseによるGUI作成経験あり</li></ul>
-            <li><a href="https://www.google.co.jp/search?q=PHP" target="_blank" class="badge badge-primary mr-1">PHP<span class="badge badge-light ml-1">Lv.1</span></a></li>
-            <ul class="list-unstyled ml-3"><li>基本文法勉強中orz</li></ul>
-          </ul>
-        </h5>
-      </div>
-      <div class="col-sm">
-        <h4>取得資格</h4>
-        <h5><a href="https://www.google.co.jp/search?q=%E5%9F%BA%E6%9C%AC%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93%E8%80%85%E8%A9%A6%E9%A8%93" target="_blank" class="badge badge-primary mr-1">基本情報技術者試験</a></h5>
-      </div>
-    </div>
-    <hr>
-
-
-    <h3>タイムライン</h3>
-    <div class="card my-3">
-      <div class="card-body">
-        <p class="card-text">今日はJavaのコンストラクタについて勉強した。</p>
-      </div>
-      <div class="card-footer text-muted">
-        2018年9月19日 16:10
-      </div>
-    </div>
-    <div class="card my-3">
-      <div class="card-body">
-        <p class="card-text">応用情報の午後難しい！誰か教えて！</p>
-      </div>
-      <div class="card-footer text-muted">
-        2018年9月12日 20:20
-      </div>
-    </div>
-
-
+  <h1>フォローリスト</h1>
+  <table class="table">
+    <tr><td>山田 太郎</td><td>削除</td></tr>
+    <tr><td>鈴木 博士</td><td>削除</td></tr>
+  </table>
 
     <!-- メッセージモーダル -->
     <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
@@ -193,5 +140,9 @@
   <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
   <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-  </body>
+  <!-- ツールチップスクリプト -->
+  <script>
+    $('[data-toggle="tooltip"]').tooltip()
+  </script>
+</body>
 </html>
