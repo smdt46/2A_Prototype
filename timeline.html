@@ -15,7 +15,7 @@
 </head>
 <body>
   
-  <!-- ナビゲーションバー -->
+  <!-- ナビゲーションバーここから -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <img class="mr-1" src="./img/logo2_white.png" width="53" height="30" alt="ロゴ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,8 +40,14 @@
             <a class="dropdown-item" href="./user/teacher_detail.html">教員詳細画面</a>
           </div>
         </li>
-        <li>
-          <a class="nav-link" href="./project_detail.html">プロジェクト詳細</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            プロジェクト
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="./project_detail.html">詳細画面</a>
+            <a class="dropdown-item" href="./project_permission.html">申請者一覧画面</a>
+          </div>
         </li>
       </ul>
       <button type="button" class="btn btn-raised btn-primary mr-2"  data-toggle="modal" data-target="#messageModal">
@@ -51,7 +57,7 @@
         ようこそ 田中 一平 さん
       </span>
     </div>
-  </nav>
+  </nav><!-- ナビゲーションバーここまで -->
 
 
   <!-- コンテンツここから -->
@@ -346,7 +352,7 @@
               <form class="mx-auto w-75">
                 <div class="form-group">
                   <label for="projectTitle" class="bmd-label-floating">プロジェクト名</label>
-                  <input type="text" class="form-control" id="projectTitle">
+                  <input type="text" class="form-control" id="projectTitle" required>
                 </div>
                 <div class="form-group">
                   <label for="recruitment" class="bmd-label-floating">募集分野</label>
@@ -366,28 +372,28 @@
                   <input type="text" class="form-control" id="required">
                 </div>
                 <div class="form-group">
-                  <label for="projectNum" class="bmd-label-floating">募集人数</label>
-                  <input type="number" class="form-control" id="projectNum">
+                  <label for="projectNum" class="bmd-label-floating">募集人数(2~50)</label>
+                  <input type="number" class="form-control" min="2" max="50"　id="projectNum" required>
                 </div>
                 <div class="form-group">
                   <label for="projectDetail" class="bmd-label-floating">プロジェクトの内容</label>
-                  <textarea class="form-control" id="projectDetail" rows="5"></textarea>
+                  <textarea class="form-control" id="projectDetail" rows="5" required></textarea>
                 </div>
                 <div class="form-row">
                   <div class="col">
                     <label for="projectStart" class="bmd-label-floating">プロジェクトの開始日</label>
-                    <input type="date" class="form-control" id="projectStart">
+                    <input type="date" class="form-control" id="projectStart" required>
                   </div>
                   <div class="col">
                     <label for="projectEnd" class="bmd-label-floating">プロジェクトの終了日</label>
-                    <input type="date" class="form-control" id="projectEnd">
+                    <input type="date" class="form-control" id="projectEnd" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="projectOther" class="bmd-label-floating">その他</label>
                   <input type="text" class="form-control" id="projectOther" rows="5">
                 </div>
-                <button type="button" class="btn btn-raised btn-primary">投稿</button>
+                <input type="submit" class="btn btn-raised btn-primary" value="投稿">
               </form>
             </div>
           </div>
