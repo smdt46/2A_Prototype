@@ -14,9 +14,9 @@
   <title>ユーザー情報編集画面</title>
 </head>
 <body>
-  <!-- ナビゲーションバー -->
+    <!-- ナビゲーションバーここから -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-    <span class="navbar-brand mb-0 h1">KDC<sup>3</sup></span>
+    <img class="mr-1" src="../img/logo2_white.png" width="53" height="30" alt="ロゴ">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,25 +29,35 @@
         <li class="nav-item">
           <a class="nav-link" href="../search.html">検索結果</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             ユーザー情報
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="./user_detail.html">詳細画面</a>
             <a class="dropdown-item" href="./user_config.html">編集画面</a>
             <a class="dropdown-item" href="./teacher_detail.html">教員詳細画面</a>
+            <a class="dropdown-item" href="./followlist.html">フォローリスト</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            プロジェクト
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../project_detail.html">詳細画面</a>
+            <a class="dropdown-item" href="../project_permission.html">申請者一覧画面</a>
           </div>
         </li>
       </ul>
       <button type="button" class="btn btn-raised btn-primary mr-2"  data-toggle="modal" data-target="#messageModal">
-        メッセージ <span class="badge badge-light">2</span>
+          メッセージ <span class="badge badge-light">2</span>
       </button>
       <span class="navbar-text">
         ようこそ 田中 一平 さん
       </span>
     </div>
-  </nav>
+  </nav><!-- ナビゲーションバーここまで -->
 
   <!-- コンテンツここから -->
   <div class="container mt-3">
