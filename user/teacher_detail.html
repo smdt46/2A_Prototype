@@ -88,8 +88,8 @@
       <div class="col">
         <h4>経験分野</h4>
         <h5>
-          <a href="https://www.google.co.jp/search?q=Docker" target="_blank" class="badge badge-primary mr-1">Docker<span class="badge badge-light ml-1">Lv.5</span></a>
-          <a href="https://www.google.co.jp/search?q=kubernetes" target="_blank" class="badge badge-primary mr-1">kubernetes<span class="badge badge-light ml-1">Lv.5</span></a>
+          <a href="https://www.google.co.jp/search?q=Docker" target="_blank" class="badge badge-primary mr-1" data-toggle="tooltip" data-placement="top" title="実務レベル">Docker<span class="badge badge-light ml-1">Lv.5</span></a>
+          <a href="https://www.google.co.jp/search?q=kubernetes" target="_blank" class="badge badge-primary mr-1" data-toggle="tooltip" data-placement="top" title="実務レベル">kubernetes<span class="badge badge-light ml-1">Lv.5</span></a>
         </h5>
       </div>
       <div class="col">
@@ -196,5 +196,9 @@
   <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
   <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-  </body>
+  <!-- ツールチップスクリプト -->
+  <script>
+    $('[data-toggle="tooltip"]').tooltip()
+  </script>
+</body>
 </html>
