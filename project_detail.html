@@ -92,7 +92,6 @@
           <li class="list-group-item"><b>山田 太郎（投稿者）</b></li>
           <li class="list-group-item">神戸 電子</li>
           <li class="list-group-item">織田 信長</li>
-          <li class="list-group-item"><div id="output" class="text-danger"></div></li>
         </ul>
       </div>
     </div>
@@ -181,10 +180,8 @@
   <!-- 参加スクリプト -->
   <script>
     function OnButtonClick() {
-      target = document.getElementById("output");
-      target.innerHTML = "田中 一平";
       target = document.getElementById("button");
-      target.innerHTML = "キャンセル";
+      target.innerHTML = "参加申請中";
       target.className = "btn btn-raised btn-secondary btn-lg btn-block";
     }
   </script>
